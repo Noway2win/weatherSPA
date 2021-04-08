@@ -1,6 +1,7 @@
 import React from 'react';
 import {Table, Alert} from 'reactstrap';
 import getImage from '../../../services/getImage';
+import SectionName from '../../section/section';
 
 const FutureWeather = (props) =>{
 	try{
@@ -20,23 +21,26 @@ const FutureWeather = (props) =>{
 			</tr>);
 		});
 		return (
-			<Table dark>
-				<thead>
-					<tr>
-						<th>Date</th>
-						<th>Condition</th>
-						<th>Morning Tempreture</th>
-						<th>Day Tempreture</th>
-						<th>Evening Tempreture</th>
-						<th>Night Tempreture</th>
-						<th>Pressure</th>
-						<th>Wind Speed</th>
-					</tr>
-				</thead>
-				<tbody>
-					{days}
-				</tbody>
-			</Table>
+			<>
+				<SectionName header={`Future weather in ${props.header}`}/>
+				<Table dark>
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Condition</th>
+							<th>Morning Tempreture</th>
+							<th>Day Tempreture</th>
+							<th>Evening Tempreture</th>
+							<th>Night Tempreture</th>
+							<th>Pressure</th>
+							<th>Wind Speed</th>
+						</tr>
+					</thead>
+					<tbody>
+						{days}
+					</tbody>
+				</Table>
+			</>
 		);
 	}
 	catch(e){

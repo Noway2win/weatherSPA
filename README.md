@@ -5,8 +5,9 @@ Weather available for biggest Belarusian cities. .
 
 ## Tech used
 
-- Fetch API
 - React Hooks
+- React-Router
 - Reactstrap(Bootstrap)
+- Fetch API
 - ES6+ classes
 - JS try{} catch() {} instead of React Lifesycle hook componentDidCatch.

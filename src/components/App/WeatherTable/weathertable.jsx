@@ -1,5 +1,6 @@
 import React from 'react';
 import {Table, Alert} from 'reactstrap';
+import SectionName from '../../section/section';
 
 const Weather = (props) =>{
 	try{
@@ -7,26 +8,29 @@ const Weather = (props) =>{
 			city= props.city;
 
 		return (
-			<Table dark>
-				<thead>
-					<tr>
-						<th>City</th>
-						<th>Tempreture</th>
-						<th>Pressure</th>
-						<th>Humidity</th>
-						<th>Feels Like</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th scope="row">{city}</th>
-						<td>{temp}&#8451;</td>
-						<td>{pressure} mBar</td>
-						<td>{humidity}%</td>
-						<td>{feelsLike}&#8451;</td>
-					</tr>
-				</tbody>
-			</Table>
+			<>
+				<SectionName header={`Future weather in ${props.header}`}/>
+				<Table dark>
+					<thead>
+						<tr>
+							<th>City</th>
+							<th>Tempreture</th>
+							<th>Pressure</th>
+							<th>Humidity</th>
+							<th>Feels Like</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">{city}</th>
+							<td>{temp}&#8451;</td>
+							<td>{pressure} mBar</td>
+							<td>{humidity}%</td>
+							<td>{feelsLike}&#8451;</td>
+						</tr>
+					</tbody>
+				</Table>
+			</>
 		);
 	}
 	catch(e){

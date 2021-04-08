@@ -75,9 +75,9 @@ const App = () => {
 					</DropdownMenu>
 				</ButtonDropdown>
 			</ButtonGroup>
-			<SectionName header={'Current weather'} text={`This is the weather right now in selected city(${city.city})`}/>
+			<SectionName header={`Current weather in ${city.city}`}/>
 			<Weather data = {weather} city={city.city}/>
-			<SectionName header={'Future weather'} text={`This is the weather in next few days in selected city(${city.city})`}/>
+			<SectionName header={`Future weather in ${city.city}`}/>
 			<FutureWeather weatherArr = {futureWeather} />
 		</div>
 	);

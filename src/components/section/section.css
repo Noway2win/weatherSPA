@@ -1,0 +1,60 @@
+.six {
+  background: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+.six h1 {
+  font-weight: normal;
+  font-family: "Merriweather", serif;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+  color: black;
+  font-size: 40px;
+  padding: 0.4em 1em 0.55em;
+}
+.six h1:before,
+.six h1:after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.1em;
+  background: #f7844e;
+}
+.six h1:before {
+  left: 0;
+  top: 0;
+}
+.six h1:after {
+  right: 0;
+  bottom: 0;
+}
+.six h1 span:before,
+.six h1 span:after {
+  content: "";
+  position: absolute;
+  width: 0.65em;
+  height: 0.65em;
+  border: 0.1em solid #f7844e;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.six h1 span:before {
+  top: -0.55em;
+  left: -0.325em;
+}
+.six h1 span:after {
+  bottom: -0.55em;
+  right: -0.325em;
+}
+@media (max-width: 600px) {
+  .six h1 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 450px) {
+  .six h1 {
+    font-size: 1.5em;
+  }
+}

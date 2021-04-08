@@ -1,16 +1,8 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Jumbotron, Container} from 'reactstrap';
+import './section.css';
 
 export default function SectionName(props){
 	return(
-		<div>
-			<Jumbotron fluid>
-				<Container fluid>
-					<h1 className="display-3">{props.header}</h1>
-					<p className="lead">{props.text}</p>
-				</Container>
-			</Jumbotron>
-		</div>
+		<div className="six"><h1><span>{props.header}</span></h1></div>
 	);
 }
